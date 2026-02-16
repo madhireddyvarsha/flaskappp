@@ -1,0 +1,5 @@
+There once was a student named Lee,
+Who coded so cleverly and free.
+He launched an EC2,
+With Flask and SQLite too,
+And uploaded his file with great glee.

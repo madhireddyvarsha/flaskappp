@@ -1,0 +1,19 @@
+<h2>User Profile</h2>
+<p>Username: {{ user[1] }}</p>
+<p>First Name: {{ user[3] }}</p>
+<p>Last Name: {{ user[4] }}</p>
+<p>Email: {{ user[5] }}</p>
+<p>Address: {{ user[6] }}</p>
+
+<h3>Upload Limerick.txt</h3>
+<form method="POST" action="/upload/{{ user[1] }}" enctype="multipart/form-data">
+<input type="file" name="limerick" required>
+<input type="submit" value="Upload">
+</form>
+
+{% if word_count %}
+<p>Word Count: {{ word_count }}</p>
+<a href="/download/{{ user[1] }}"><button>Download Uploaded File</button></a>
+{% endif %}
+
+<a href="/relogin">Re-login</a>
